@@ -1,0 +1,28 @@
+1st__Run___
+extraLargeArray:
+- insert 891.2357 ms
+- append 2.9375 ms
+largeArray:
+- insert 9.265 ms
+- append 658.1 μs
+mediumArray
+- insert 186.6 μs
+- append 169.6 μs
+smallArray
+- insert 46.4 μs
+- append 127.5 μs
+tinyArray
+- insert 33.5 μs
+- append 117.5 μs
+
+With the smaller array types append (.push) is slower than insert (.unshift). That difference is marginal when compared to the difference with larger array types. Its clear append sclaes much better as it becomes much quicker as soon as the largeArray and extraLargeArray are used. 
+
+The reason for this is how the methods update the array. The .push() method just adds the new objects to the end of the array. Where as .unshift adds the new objects at the beginning of the array. Requiring the logic to shift all the existing objects to their new indices in the array. 
+
+Here are my times from my last run with all 4 problems being console logged.
+
+$ node jsProblems.js 
+false 70.3 μs //Problem 1
+false 54.1 μs //Problem 2
+true 63.8 μs //Problem 3
+10 45.9 μs //Problem 4
