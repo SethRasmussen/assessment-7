@@ -91,4 +91,4 @@ let problemFour = perf.stop();
 
 console.log(result4, problemFour.preciseWords);
 
-//.txt file with notes and runtimes included in project file (runtime-analysis-notes.txt)
+//.txt file with notes and runtimes included in project file (runtime-analysis-notes.txt).
